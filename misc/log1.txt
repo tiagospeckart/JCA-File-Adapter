@@ -1,0 +1,91 @@
+fs2190@CTS1B147757 MINGW64 ~/Documents/Projetos/wildfly-30.0.0.Final/bin
+$ ./standalone.sh
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: C:\Users\fs2190\Documents\Projetos\wildfly-30.0.0.Final
+
+  JAVA: C:\Program Files\Zulu\zulu-19\/bin/java
+
+  JAVA_OPTS:  -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true  --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED -Djava.security.manager=allow
+
+=========================================================================
+
+09:47:10,517 INFO  [org.jboss.modules] (main) JBoss Modules version 2.1.2.Final
+09:47:11,179 INFO  [org.jboss.msc] (main) JBoss MSC version 1.5.2.Final
+09:47:11,188 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+09:47:11,316 INFO  [org.jboss.as] (MSC service thread 1-3) WFLYSRV0049: WildFly Full 30.0.0.Final (WildFly Core 22.0.1.Final) starting
+09:47:12,173 INFO  [org.wildfly.security] (ServerService Thread Pool -- 28) ELY00001: WildFly Elytron version 2.2.2.Final
+09:47:13,010 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 18) WFLYCTL0028: Attribute 'cluster' in the resource at address '/subsystem=ejb3/service=remote' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+09:47:13,032 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) WFLYDS0015: Re-attempting failed deployment jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar
+09:47:14,603 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+09:47:14,633 INFO  [org.xnio] (MSC service thread 1-7) XNIO version 3.8.11.Final
+09:47:14,644 INFO  [org.xnio.nio] (MSC service thread 1-7) XNIO NIO Implementation Version 3.8.11.Final
+09:47:14,692 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 57) WFLYRS0016: RESTEasy version 6.2.5.Final
+09:47:14,697 INFO  [org.wildfly.extension.elytron.oidc._private] (ServerService Thread Pool -- 53) WFLYOIDC0001: Activating WildFly Elytron OIDC Subsystem
+09:47:14,699 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 55) WFLYCLINF0001: Activating Infinispan subsystem.
+09:47:14,702 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 54) WFLYHEALTH0001: Activating Base Health Subsystem
+09:47:14,713 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 74) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+09:47:14,714 INFO  [org.wildfly.extension.microprofile.jwt.smallrye] (ServerService Thread Pool -- 66) WFLYJWT0001: Activating MicroProfile JWT Subsystem
+09:47:14,716 INFO  [org.wildfly.extension.microprofile.config.smallrye] (ServerService Thread Pool -- 65) WFLYCONF0001: Activating MicroProfile Config Subsystem
+09:47:14,725 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 62) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+09:47:14,756 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 64) WFLYMETRICS0001: Activating Base Metrics Subsystem
+09:47:14,763 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 56) WFLYIO001: Worker 'default' has auto-configured to 16 IO threads with 128 max task threads based on your 8 available processors
+09:47:14,784 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 67) WFLYNAM0001: Activating Naming Subsystem
+09:47:14,840 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 76) WFLYWS0002: Activating WebServices Extension
+09:47:14,852 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0003: Undertow 2.3.10.Final starting
+09:47:14,907 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0027: Starting deployment of "jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar" (runtime-name: "jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar")
+09:47:14,934 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 44) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 2.2)
+09:47:14,950 INFO  [org.jboss.as.connector] (MSC service thread 1-4) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 3.0.4.Final)
+09:47:15,035 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0018: Started Driver service with driver-name = h2
+09:47:15,036 INFO  [org.jboss.as.naming] (MSC service thread 1-1) WFLYNAM0003: Starting Naming Service
+09:47:15,098 INFO  [org.jboss.remoting] (MSC service thread 1-4) JBoss Remoting version 5.0.27.Final
+09:47:15,129 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 75) WFLYUT0014: Creating file handler for path 'C:\Users\fs2190\Documents\Projetos\wildfly-30.0.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+09:47:15,169 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY00023: KeyStore file 'C:\Users\fs2190\Documents\Projetos\wildfly-30.0.0.Final\standalone\configuration\application.keystore' does not exist. Used blank.
+09:47:15,232 INFO  [org.jboss.as.ejb3] (MSC service thread 1-7) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+09:47:15,232 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+09:47:15,262 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-7) WFLYELY01084: KeyStore C:\Users\fs2190\Documents\Projetos\wildfly-30.0.0.Final\standalone\configuration\application.keystore not found, it will be auto-generated on first use with a self-signed certificate for host localhost
+09:47:15,308 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0012: Started server default-server.
+09:47:15,384 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) Queuing requests.
+09:47:15,389 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0018: Host default-host starting
+09:47:15,670 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-4) WFLYDS0013: Started FileSystemDeploymentService for directory C:\Users\fs2190\Documents\Projetos\wildfly-30.0.0.Final\standalone\deployments
+09:47:16,789 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+09:47:16,837 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+09:47:16,838 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+09:47:16,972 INFO  [org.jboss.as.ejb3] (MSC service thread 1-8) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+09:47:17,003 INFO  [org.jboss.ws.common.management] (MSC service thread 1-4) JBWS022052: Starting JBossWS 7.0.0.Final (Apache CXF 4.0.0)
+09:47:17,050 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+09:47:17,357 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-8) MSC000001: Failed to start service jboss.deployment.unit."jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar".INSTALL: org.jboss.msc.service.StartException in service jboss.deployment.unit."jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar".INSTALL: WFLYSRV0153: Failed to process phase INSTALL of deployment "jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar"
+        at org.jboss.as.server@22.0.1.Final//org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:178)
+        at org.jboss.msc@1.5.2.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1617)
+        at org.jboss.msc@1.5.2.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1580)
+        at org.jboss.msc@1.5.2.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1438)
+        at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+        at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+        at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+        at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+        at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: org.jboss.jca.common.api.validator.ValidateException: IJ010075: The resource adapter metadata must contain either an outbound or inbound configuration
+        at org.jboss.as.connector@30.0.0.Final//org.jboss.as.connector.deployers.ra.processors.ParsedRaDeploymentProcessor.process(ParsedRaDeploymentProcessor.java:216)
+        at org.jboss.as.connector@30.0.0.Final//org.jboss.as.connector.deployers.ra.processors.ParsedRaDeploymentProcessor.deploy(ParsedRaDeploymentProcessor.java:111)
+        at org.jboss.as.server@22.0.1.Final//org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:171)
+        ... 8 more
+Caused by: org.jboss.jca.common.api.validator.ValidateException: IJ010075: The resource adapter metadata must contain either an outbound or inbound configuration
+        at org.jboss.ironjacamar.impl@3.0.4.Final//org.jboss.jca.common.metadata.spec.ResourceAdapterImpl.validate(ResourceAdapterImpl.java:228)
+        at org.jboss.ironjacamar.impl@3.0.4.Final//org.jboss.jca.common.metadata.spec.ConnectorImpl.validate(ConnectorImpl.java:349)
+        at org.jboss.as.connector@30.0.0.Final//org.jboss.as.connector.deployers.ra.processors.ParsedRaDeploymentProcessor.process(ParsedRaDeploymentProcessor.java:173)
+        ... 10 more
+
+09:47:17,363 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("deploy") failed - address: ([("deployment" => "jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar")]) - failure description: {"WFLYCTL0080: Failed services" => {"jboss.deployment.unit.\"jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar\".INSTALL" => "WFLYSRV0153: Failed to process phase INSTALL of deployment \"jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar\"
+    Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: org.jboss.jca.common.api.validator.ValidateException: IJ010075: The resource adapter metadata must contain either an outbound or inbound configuration
+    Caused by: org.jboss.jca.common.api.validator.ValidateException: IJ010075: The resource adapter metadata must contain either an outbound or inbound configuration"}}
+09:47:17,424 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar" (runtime-name : "jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar")
+09:47:17,429 INFO  [org.jboss.as.controller] (Controller Boot Thread) WFLYCTL0183: Service status report
+WFLYCTL0186:   Services which failed to start:      service jboss.deployment.unit."jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar".INSTALL: WFLYSRV0153: Failed to process phase INSTALL of deployment "jca-file-adapter-deployable-1.1.0.4-SNAPSHOT.rar"
+
+09:47:17,555 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+09:47:17,563 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+09:47:17,564 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+09:47:17,565 ERROR [org.jboss.as] (Controller Boot Thread) WFLYSRV0026: WildFly Full 30.0.0.Final (WildFly Core 22.0.1.Final) started (with errors) in 7392ms - Started 328 of 553 services (1 services failed or missing dependencies, 320 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml
+fs2190@CTS1B147757 MINGW64 ~/Documents/Projetos/wildfly-30.0.0.Final/bin

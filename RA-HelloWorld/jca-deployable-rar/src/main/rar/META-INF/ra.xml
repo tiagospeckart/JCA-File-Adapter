@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="https://jakarta.ee/xml/ns/jakartaee"
+            elementFormDefault="qualified"
+            version="2.1">
+<connector>
+    <display-name>JCA Demo Resource Adapter</display-name>
+    <vendor-name>Demo</vendor-name>
+    <eis-type>Sample EIS</eis-type>
+    <resourceadapter-version>7.1</resourceadapter-version>
+    <resourceadapter-class>com.sample.adapter.HelloWorldResourceAdapter</resourceadapter-class>
+    <spec-version>1.8</spec-version>
+    <connection-definitions>
+        <connection-definition
+                class-name="com.sample.adapter.HelloWorldManagedConnectionFactory"
+                jndi-name="java:/eis/HelloWorld"/>
+    </connection-definitions>
+</connector>

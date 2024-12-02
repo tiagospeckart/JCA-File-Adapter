@@ -1,0 +1,113 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# WildFly
+wildfly*/
+.wildfly/
+standalone/data/
+standalone/deployments/
+standalone/log/
+standalone/tmp/
+domain/data/
+domain/deployments/
+domain/log/
+domain/tmp/
+
+# IDE - Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# IDE - VS Code
+.vscode/
+.code-workspace
+
+# Logs
+logs/
+*.log
+log/
+
+# OS specific
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+## macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+## Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Build tools
+.gradle/
+build/
+
+# Node (if using frontend tooling)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+application.properties
+application-*.properties
+!application.properties.template
+!application-example.properties
+
+# Project specific
+*.pid
+.factorypath
+.springBeans
+.sts4-cache/
+rebel.xml
+
+# Test coverage reports
+coverage/
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover

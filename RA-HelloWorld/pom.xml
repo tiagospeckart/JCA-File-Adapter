@@ -1,0 +1,77 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sample</groupId>
+    <artifactId>jca-demo-parent</artifactId>
+    <name>RA Hello World</name>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <version.org.jboss.ironjacamar>1.4.35.Final</version.org.jboss.ironjacamar>
+        <version.wildfly.maven.plugin>4.2.1.Final</version.wildfly.maven.plugin>
+        <version.jakarta.jakartaee-api>10.0.0</version.jakarta.jakartaee-api>
+        <version.ironjacamar-spec-api>${version.org.jboss.ironjacamar}</version.ironjacamar-spec-api>
+        <version.maven-compiler-plugin>3.11.0</version.maven-compiler-plugin>
+        <version.maven-jar-plugin>3.3.0</version.maven-jar-plugin>
+        <version.maven-rar-plugin>3.0.0</version.maven-rar-plugin>
+        <version.ironjacamar-depchain>${version.org.jboss.ironjacamar}</version.ironjacamar-depchain>
+        <version.wildfly-maven-plugin>${version.wildfly.maven.plugin}</version.wildfly-maven-plugin>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <modules>
+        <module>jca-demo-api</module>
+        <module>jca-deployable-rar</module>
+        <module>jca-demo-war</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>jakarta.platform</groupId>
+                <artifactId>jakarta.jakartaee-api</artifactId>
+                <version>${version.jakarta.jakartaee-api}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.ironjacamar</groupId>
+                <artifactId>ironjacamar-spec-api</artifactId>
+                <version>${version.ironjacamar-spec-api}</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.ironjacamar</groupId>
+                <artifactId>ironjacamar-depchain</artifactId>
+                <version>${version.ironjacamar-depchain}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${version.maven-compiler-plugin}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>${version.wildfly.maven.plugin}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

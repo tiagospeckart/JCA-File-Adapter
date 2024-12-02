@@ -1,0 +1,7 @@
+<jboss-deployment-structure>
+    <deployment>
+        <dependencies>
+            <module name="deployment.jca-demo-ra-1.0.rar"/>
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>

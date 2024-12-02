@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>com.dcx.jfoss.fra</groupId>
+		<artifactId>jca-file-adapter-parent</artifactId>
+		<version>1.1.0.4-SNAPSHOT</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>jca-file-adapter-war</artifactId>
+	<name>JCA File Adapter - WAR</name>
+	<packaging>war</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.report.sourceEncoding>UTF-8</project.report.sourceEncoding>
+		<maven.compiler.release>17</maven.compiler.release>
+		<jakartaee-api.version>10.0.0</jakartaee-api.version>
+		<wildfly.version>30.0.0.Final</wildfly.version>
+		<compiler-plugin.version>3.11.0</compiler-plugin.version>
+		<war-plugin.version>3.3.2</war-plugin.version>
+		<wildfly-plugin.version>4.2.1.Final</wildfly-plugin.version>
+		<wildfly.home>c:\Users\fs2190\Documents\Projetos\wildfly-30.0.0.Final</wildfly.home>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>jakarta.platform</groupId>
+			<artifactId>jakarta.jakartaee-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+<!--		TODO: how to use class loading + Class Casting-->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>jca-file-adapter-api</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.22.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.22.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>web-app</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${compiler-plugin.version}</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${war-plugin.version}</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+
+			<!-- Execute 'mvn clean package wildfly:dev' to run the application. -->
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>${wildfly-plugin.version}</version>
+				<configuration>
+					<version>${wildfly.version}</version>
+					<server-config>standalone.xml</server-config>
+					<jbossHome>${wildfly.home}</jbossHome>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

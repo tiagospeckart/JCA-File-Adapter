@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connector xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/connector_2_1.xsd" version="2.1">
+    <vendor-name>DaimlerChrysler, PAI</vendor-name>
+    <eis-type>Local File System</eis-type>
+    <resourceadapter-version>1.0</resourceadapter-version>
+    <resourceadapter>
+        <resourceadapter-class>com.dcx.jfoss.fra.spi.JCAFileAdapter</resourceadapter-class>
+        <outbound-resourceadapter>
+            <connection-definition>
+                <managedconnectionfactory-class>com.dcx.jfoss.fra.spi.outbound.JCAFileAdapterManagedConnectionFactory</managedconnectionfactory-class>
+                <connectionfactory-interface>com.dcx.jfoss.fra.api.JCAFileAdapterConnectionFactory</connectionfactory-interface>
+                <connectionfactory-impl-class>com.dcx.jfoss.fra.spi.JCAFileAdapterConnectionFactoryImpl</connectionfactory-impl-class>
+                <connection-interface>com.dcx.jfoss.fra.api.JCAFileAdapterConnection</connection-interface>
+                <connection-impl-class>com.dcx.jfoss.fra.spi.JCAFileAdapterConnectionImpl</connection-impl-class>
+            </connection-definition>
+            <transaction-support>NoTransaction</transaction-support>
+            <reauthentication-support>false</reauthentication-support>
+        </outbound-resourceadapter>
+    </resourceadapter>
+</connector>
